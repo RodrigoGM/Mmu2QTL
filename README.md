@@ -1,4 +1,4 @@
-Fat QTL
+Mmu2 QTL
 ==========
 This repository contains the raw data and the analysis scripts for mapping body fat mass QTL on mouse chromosome 2 using subcongenic strains.
 
