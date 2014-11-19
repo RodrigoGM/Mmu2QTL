@@ -1,0 +1,24 @@
+id	Short ID	phenotype
+strain	Mouse Strain	
+mouse.id	Mouse Colony ID	
+dam	Dam	
+sire	Sire	
+sex	Sex	
+dob	Date of Birth	
+date.2wk	Date at 2WK	
+date.3wk	Date at 3WK	
+date.6wk	Date at 4WK	
+date.9wk	Date at 9WK	
+sac.date	Sacrifice date	
+age.sac	Age at Sacrifice	
+ls	Litter Size	
+seq	Dam Sequence/Parity	
+mtw	Maternal Mating Weight	
+tissue	Tissue collected	0 = no ; 1 = yes
+recombinat	Recombiant genotypes	nr = non recombinat ; R = recombinant ; bhc = genotyes of previous PCR if inconsistent
+sac	Sacrifice Weight (g)	
+gfp	Gonadal Fat Pad (g)	
+rfp	Retroperitoneal Fat Pad (g)	
+mfp	Mesenteric Fat Pad (g)	
+ffp	Femoral Fat Pad (g)	
+tf	Total Fat Mass (g)	

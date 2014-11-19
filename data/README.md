@@ -7,17 +7,19 @@ This directory contains mouse body fat mass data and its covariates used to perf
 
 Plese don't hesitate to send us an email if you have any questions.
 
-Rodrigo Gularte Mérida
-Unit of Animal Genomics
-GIGA -- Research
-Université de Liège
-Place XX Aout 7
-4000 Liège
-Belgium
+SBC_hg2d_pheno.csv
+------------------
+At the moment contains only body fat data and the covariates used to perform an in-depth QTL analysis\
+ on distal mouse choromosome 2.  This is the raw, curated data. The curation process consisted of\
+ double checking all the phenotypes for every single individual with our paper records at the moment\
+ of the dissection and after finishing with the data input process.
 
-Former:
-Juan Medrano Laboratory
-Department of Animal Science
-University of California, Davis
-One Shields Ave
-Davis, CA 95616
+SBC_hg2d_geno.csv
+-----------------
+This file contains the genotypes of the mice used for the QTL analysis. There are two types of markers\
+ microsatellites and SNP.  For microsatellites the midpoint between the start and end positions were\
+ used.  All locations are based on Genome build mm9/NCBI_b37.
+ 
+abv.dat
+-------
+This file contains the abreviations, the phenotype's full name, and any information pertaining the phenotypes
