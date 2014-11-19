@@ -23,3 +23,11 @@ This file contains the genotypes of the mice used for the QTL analysis. There ar
 abv.dat
 -------
 This file contains the abreviations, the phenotype's full name, and any information pertaining the phenotypes
+
+Fatq2b - Atp5e_Ctsz.sds, Fatq2b - Gnas_Rab22a.sds,
+Fatq2b - Gus_GusRanin.sds, Fatq2b - Stx16_SDHA.sds
+--------------------------------------------------
+These files contain the raw qPCR expression data for each individual mouse.  Files are in *.sds format and can\
+ be read/used with ABI Data File Converter or ABI Prism(R). Please vist ABI <appliedbiosystems.com> for more\
+ information on how to access these files.
+
