@@ -5,3 +5,24 @@ This repository contains the raw data and the analysis scripts for mapping QTL o
 Please not that all the files contained in the data/ directory are excluded from the BSD license. To use them as part of any purpose : research or teaching, we would appreciate that you notify us by email.
 
 Thank you in advance
+
+data/
+-----
+This directory contains mouse body fat mass data and its covariates used to perform a QTL mapping.\
+ You may use the data for self learning and teaching purposes. However, we would appreciate that you\
+ notify us at <jfmedrano at ucdavis dot edu> or <rodrigo dot gularte at ulg dot ac dot be>\
+ if you are distributing the data to a class or colleagues.
+
+Plese don't hesitate to send us an email if you have any questions.
+
+figures/
+--------
+Contains an SVG file with the published figures.
+
+analysis/
+---------
+currently empty directory where analysis ouptuts are kept.
+
+src/
+----
+Scripts and other source code to perform the data analysis.
