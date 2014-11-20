@@ -1,3 +1,5 @@
+*** DATA IS EMBARGOED UNTIL PUBLICTION ***
+
 Mmu2 QTL
 ==========
 This repository contains the raw data and the analysis scripts for mapping QTL on mouse chromosome 2 using CAST derived subcongenic strains.
