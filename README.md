@@ -26,3 +26,5 @@ currently empty directory where analysis ouptuts are kept.
 src/
 ----
 Scripts and other source code to perform the data analysis.
+
+[![DOI](https://zenodo.org/badge/7281/RodrigoGM/Mmu2QTL.png)](http://dx.doi.org/10.5281/zenodo.12793)
