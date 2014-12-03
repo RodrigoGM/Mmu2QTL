@@ -1,4 +1,5 @@
-*** DATA IS EMBARGOED UNTIL PUBLICTION ***
+[![DOI](https://zenodo.org/badge/7281/RodrigoGM/Mmu2QTL.png)](http://dx.doi.org/10.5281/zenodo.12793)
+
 
 Mmu2 QTL
 ==========
@@ -8,8 +9,8 @@ Please not that all the files contained in the data/ directory are excluded from
 
 Thank you in advance
 
-data/
------
+### data/
+
 This directory contains mouse body fat mass data and its covariates used to perform a QTL mapping.\
  You may use the data for self learning and teaching purposes. However, we would appreciate that you\
  notify us at <jfmedrano at ucdavis dot edu> or <rodrigo dot gularte at ulg dot ac dot be>\
@@ -17,19 +18,16 @@ This directory contains mouse body fat mass data and its covariates used to perf
 
 Plese don't hesitate to send us an email if you have any questions.
 
-figures/
---------
+### figures/
+
 Contains an SVG file with the published figures.
 
-analysis/
----------
+### analysis/
+
 currently empty directory where analysis ouptuts are kept.
 
-src/
-----
-Scripts and other source code to perform the data analysis.
-<<<<<<< HEAD
+### src/
 
-[![DOI](https://zenodo.org/badge/7281/RodrigoGM/Mmu2QTL.png)](http://dx.doi.org/10.5281/zenodo.12793)
-=======
->>>>>>> 9a95b6b69566c98d5d5bf2a6c6cc6c3148ce2651
+Scripts and other source code to perform the data analysis.
+
+
