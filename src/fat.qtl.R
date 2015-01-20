@@ -16,8 +16,8 @@ setwd("../analysis/")
 
 # libraries and sources
 library(qtl)
-source('../src/qtl.r')
-source('../src/qtl2.r')
+source('../src/qtl.R')
+source('../src/qtl2.R')
  
 # loads cross data from data/ 
 load(file="../data/SBC_hg2d.rda")
@@ -79,7 +79,7 @@ out.MFPe.ss2<- scanone(D2sq, pheno.col="mfp.e", method="hk", addcovar=sm, intcov
 out.FFPe.ss2<- scanone(D2sq, pheno.col="ffp.e", method="hk", addcovar=sm, intcovar=sm)
 
 #Analisis of multiple traits.
-#  These functions are contained in the qtl.r and qtl2.r.  At the time of the analysis R/qtl did not
+#  These functions are contained in the qtl.R and qtl2.R.  At the time of the analysis R/qtl did not
 #  have built in functions to analyze multiple QTL, in addition these functions allow for searching
 #  for multiple peaks in the lod profile. Ploting functions automaitcally plot the CI of each QTL
 #  above the peak.

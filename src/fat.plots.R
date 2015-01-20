@@ -1,8 +1,8 @@
 ## quick and dirty plots
 setwd("../analysis/")
 library(qtl)
-source("../src/qtl.r")
-source("../src/qtl2.r")
+source("../src/qtl.R")
+source("../src/qtl2.R")
 
 # loads output from fat.qtl.R
 load("scanone_output.rda")

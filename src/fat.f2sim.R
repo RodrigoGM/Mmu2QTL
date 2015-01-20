@@ -9,8 +9,8 @@ library(qtl)
 library(coda)
 library(hdrcde)
 library(boa)
-source('../src/qtl.r')
-source('../src/qtl2.r')
+source('../src/qtl.R')
+source('../src/qtl2.R')
 
 
 ## DATA AND OUTPUTS
@@ -18,8 +18,8 @@ load("../data/SBC_hg2d.rda")
 load("scanone_output.rda")
 #load("rcim simulation results.rda")
 
-#load(file="08-04-29 sim.1.rda")      #  Simulation 1: 11 markers not equally spaced
-#load(file="08-04-29 sim.2.rda")      #  Simulation 2: 53 markers equally spaced
+#load(file="08-04-29 sim.1.rda")      #  Simulation 1: 11 markers not equally spaced e.g. microsattelites
+#load(file="08-04-29 sim.2.rda")      #  Simulation 2: 53 markers equally spaced e.g. SNP
 #load("08-04-30 CIM of control phenotype.rda")  # Simulations 1 and 2
 #load("08-04-30 rCIM of Alternative phenotype.rda")
 

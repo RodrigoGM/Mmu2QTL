@@ -24,8 +24,8 @@ library(qtl)
 library(coda)
 library(boa)
 library(hdrcde)
-source('../src/qtl.r')
-source('../src/qtl2.r')
+source('../src/qtl.R')
+source('../src/qtl2.R')
  
 # loads cross data from data/ 
 load(file="../data/SBC_hg2d.rda")
