@@ -6,8 +6,9 @@
 #  from all five subcongenics and the data from the HG2D cross.
 #  All genotypes and phenotypes were manually cuarated.  Three
 #  SNP were removed because they lacked quality peaks (calls).
-# To cite this data please use doi:10.5281/zenodo.12793, and the
-#  publication.
+#
+# To cite this data please use doi:10.5281/zenodo.12793, and/or
+#   the publication.
 #################################################################
 
 # set data as working directory

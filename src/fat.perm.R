@@ -1,10 +1,13 @@
 #################################################################
-##
-##
+# This script runs the permutations of the IM QTL analysis of
+#  body fat phenotypes from five overlapping subcongenics on MMU2
+#  and the founder congenic.  
+#
+# To cite this data please use doi:10.5281/zenodo.12793, and the
+#  publication.
 #################################################################
 setwd("../analysis/")
 library(qtl)
-
 
 # permutations
 

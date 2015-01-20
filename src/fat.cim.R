@@ -1,20 +1,18 @@
 #####################################################################
-# This script runs a QTL analysis of body fat phenotypes from five
-#  overlapping subcongenics on MMU2 and the founder congenic.  Each
-#  congenic was used to develop an F2 intercross and all the data
-#  was merged as a single cross. All mice were first genotyped with
-#  a panel of 11 microsattelite markers.  The recombinant mice were
-#  later genotyped with a high density panel of 48 SNP in between
-#  140 to 180 Mb (roughly) to increase the resoluition of the QTL map
+# This script runs a CIM and rCIM QTL analyses of body fat phenotypes 
+#  from five overlapping subcongenics on MMU2 and the founder 
+#  congenic. Each congenic was used to develop an F2 intercross and 
+#  all the data was merged as a single cross. All mice were first
+#  genotyped with a panel of 11 microsattelite markers.  The
+#  recombinant mice were later genotyped with a high density panel of
+#  48 SNP in between 140 to 180 Mb (roughly) to increase the 
+#  resoluition of the QTL map. The rCIM was the baseline rCIM, the
+#  3 x 3 factorial design of window and step sizes are contained in
+#  different scripts.
+#
 # To cite this data please use doi:10.5281/zenodo.12793, and the
 #  publication.
 #####################################################################
-#################################################################
-#   The 07-12-10 *.RDA data set contains the data from the 5  ##
-#   subcongenics and the data from the HG2D cross             ##
-#  The code here will be used to fine map the critical region ##
-#  of Fatq2 using a replicated CIM approacn                   ##
-#################################################################
 
 # move to analysis
 setwd("../analysis/")
@@ -92,7 +90,7 @@ sapply(markers, function(m) {layout(matrix(c(1,2,1,2), 2, 2, byrow=TRUE), c(2,2)
                             })
 dev.off()
 
-## DENSITY PLOTS
+# high densit region plots
 pdf(file="../figures/Marker HDR density 400x.pdf")
 sapply(markers, function(m) {layout(matrix(c(1,2,1,2), 2, 2, byrow=TRUE), c(2,2), respect=TRUE)
                             par(mar=c(4,4,4,0))

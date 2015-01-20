@@ -78,7 +78,7 @@ out.RFPe.ss2<- scanone(D2sq, pheno.col="rfp.e", method="hk", addcovar=sm, intcov
 out.MFPe.ss2<- scanone(D2sq, pheno.col="mfp.e", method="hk", addcovar=sm, intcovar=sm)
 out.FFPe.ss2<- scanone(D2sq, pheno.col="ffp.e", method="hk", addcovar=sm, intcovar=sm)
 
-#Analisis of multiple traits.
+# Analisis of multiple traits.
 #  These functions are contained in the qtl.R and qtl2.R.  At the time of the analysis R/qtl did not
 #  have built in functions to analyze multiple QTL, in addition these functions allow for searching
 #  for multiple peaks in the lod profile. Ploting functions automaitcally plot the CI of each QTL
@@ -101,7 +101,7 @@ mlodint.mscanone(out.FATtrt.ss, chr=2, sep=1, drop=1.5, cutoff=1)
 mlodint.mscanone(out.FATtrt.nc, chr=2, sep=1, drop=1.5, cutoff=2)
 
 # Analyzing only HG2D cross
-#  this data is not saved in the rda files.
+#  This data is not saved in the rda files.
 
 HG2D<- subset(D2sq, ind=grep("2D$", D2sq$pheno$strain))
 SBC<- subset(D2sq, ind=grep("2D[ABCDE]$", D2sq$pheno$strain))
