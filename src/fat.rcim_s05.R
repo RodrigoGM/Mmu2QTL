@@ -33,7 +33,7 @@ rcim.tf.ss.s05 <- lapply(winsize, function(win.size) {
 
 	if(win.size == 1) {all.tf.s05.w1 <<- rcim.results}
 	if(win.size == .5) {all.tf.s05.w05 <<- rcim.results}
-	if(win.size == .25) {all.tf.s05.w02 <<- rcim.results}
+	if(win.size == .25) {all.tf.s05.w025 <<- rcim.results}
 
 	})
 
@@ -48,7 +48,7 @@ rcim.gfp.ss.s05 <- lapply(winsize, function(win.size) {
 
 	if(win.size == 1) {all.gfp.s05.w1 <<- rcim.results}
 	if(win.size == .5) {all.gfp.s05.w05 <<- rcim.results}
-	if(win.size == .25) {all.gfp.s05.w02 <<- rcim.results}
+	if(win.size == .25) {all.gfp.s05.w025 <<- rcim.results}
 
 	})
 
@@ -60,7 +60,7 @@ rcim.rfp.ss.s05 <- lapply(winsize, function(win.size) {
 
 	if(win.size == 1) {all.rfp.s05.w1 <<- rcim.results}
 	if(win.size == .5) {all.rfp.s05.w05 <<- rcim.results}
-	if(win.size == .25) {all.rfp.s05.w02 <<- rcim.results}
+	if(win.size == .25) {all.rfp.s05.w025 <<- rcim.results}
 
 	})
 
@@ -73,7 +73,7 @@ rcim.ffp.ss.s05 <- lapply(winsize, function(win.size) {
 
 	if(win.size == 1) {all.ffp.s05.w1 <<- rcim.results}
 	if(win.size == .5) {all.ffp.s05.w05 <<- rcim.results}
-	if(win.size == .25) {all.ffp.s05.w02 <<- rcim.results}
+	if(win.size == .25) {all.ffp.s05.w025 <<- rcim.results}
 
 	})
 
@@ -86,7 +86,7 @@ rcim.mfp.ss.s05 <- lapply(winsize, function(win.size) {
 
 	if(win.size == 1) {all.mfp.s05.w1 <<- rcim.results}
 	if(win.size == .5) {all.mfp.s05.w05 <<- rcim.results}
-	if(win.size == .25) {all.mfp.s05.w02 <<- rcim.results}
+	if(win.size == .25) {all.mfp.s05.w025 <<- rcim.results}
 
 	})
 

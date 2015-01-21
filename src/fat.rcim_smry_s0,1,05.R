@@ -15,8 +15,9 @@ setwd("../analysis/")
 
 require(qtl)|| stop('qtl package not available')
 
-##DATA
-# load indifidual cross files
+# data
+for (x in file.path("rcim", list.files("rcim/", pattern = "tf.*rda"))) load(x)
+load("../data/D2sq_s0,s0.25,s0.5,s1.rda")
 
 TF.s0 <- matrix(NA, nrow=length(rownames(all.tf.s0.w1)), ncol=length(ls(pattern='.s0\\.')))
 TF.s0 <- data.frame(TF.s0)
@@ -63,7 +64,7 @@ attr(TF.s1, 'map') = pull.map(D2sq.s1)
 ## D2sq.s05
 TF.s05[,'tf.s05.w1'] <- apply(all.tf.s05.w1[,sims], 1, median)
 TF.s05[,'tf.s05.w05'] <- apply(all.tf.s05.w05[,sims], 1, median)
-TF.s05[,'tf.s05.025'] <- apply(all.tf.s05.025[,sims], 1, median)
+TF.s05[,'tf.s05.025'] <- apply(all.tf.s05.w025[,sims], 1, median)
 
 TF.s05 <- data.frame(chr=all.tf.s05.w1$chr, pos=all.tf.s05.w1$pos, TF.s05)
 
@@ -75,12 +76,13 @@ attr(TF.s05, 'map') = pull.map(D2sq.s05)
 legends <- names(TF.s0)[grep('s0', names(TF.s0))]
 legends <- gsub('\\.', ' -', legends)
 
-plot(TF.s05, lodcolum=c(1,2,3), xlim=c(145, 180), col=c(7,8,9))
 plot(TF.s0, lodcolum=c(1,2,3), xlim=c(145, 180), col=c(1,2,3), add=TRUE)
+plot(TF.s05, lodcolum=c(1,2,3), xlim=c(145, 180), col=c(7,8,9))
 plot(TF.s1, lodcolum=c(1,2,3), xlim=c(145, 180), col=c(4,5,6), add=TRUE)
 
-plot(TF.s05, lodcolum=c(1,2,3), xlim=c(172, 176), col=c("purple"), lwd=2, lty=c(1,2,3), ylim=c(-1, 3.5), incl.markers=TRUE, show.marker.names=TRUE)
 plot(TF.s0, lodcolum=c(1,2,3), xlim=c(173, 175), col=c("brown"), lwd=2, lty=c(1,2,3), add=TRUE)
+plot(TF.s05, lodcolum=c(1,2,3), xlim=c(172, 176), col=c("purple"), lwd=2, lty=c(1,2,3), ylim=c(-1, 3.5), incl.markers=TRUE, show.marker.names=TRUE)
 plot(TF.s1, lodcolum=c(1,2,3), xlim=c(173, 175), col=c("darkgreen"),lwd=2, lty=c(1,2,3), add=TRUE)
 
 
+save(ls(pattern = "TF.s"), file = "TF_rcimSummary.rda")
