@@ -27,6 +27,7 @@ source('../src/qtl2.R')
  
 # loads cross data from data/ 
 load(file="../data/SBC_hg2d.rda")
+load("../analysis/scanone_output.rda")
 
 # creating a sex and sac covariate matrix
 sm=cbind(D2sq$pheno$sex,D2sq$pheno$sac)

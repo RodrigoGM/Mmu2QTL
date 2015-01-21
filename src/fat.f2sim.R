@@ -168,7 +168,7 @@ invisible(
 sapply(4:302, function(i) lines(x = all.sim2.w2.rp$pos, y = all.sim2.w2.rp[, i], type = "l"))
 )
 
-plot(Sim.2 ~ pos data = all.sim2.w2.10m.rt, type = 'l')
+plot(Sim.2 ~ pos, data = all.sim2.w2.10m.rt, type = 'l')
 invisible(
 sapply(4:302, function(i) lines(x = all.sim2.w2.10m.rt$pos, y = all.sim2.w2.10m.rt[, i], type = "l"))
 )
