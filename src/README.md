@@ -16,7 +16,7 @@ It performs 1000 permutations for the selected phenotype models.
 
 #### 4. fat.cim.R : CIM QTL analysis fo fat phenotypes
 
-** Requires object `out.TFe.ss`. Can be found in 'scanone_output.rda' or run in the same session as fat.qtl.R
+** Requires object `out.TFe.ss`. Can be found in ```scanone_output.rda``` or run in the same session as fat.qtl.R
 
 This script analyzes Total Fat Mass with Composite Interval Mapping.  It runs several instances of CIM with various combination of parameters and covariates
 
