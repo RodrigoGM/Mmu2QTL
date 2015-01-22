@@ -6,8 +6,7 @@ If you have a big enough computer, mainly lots of RAM, you can run these directl
 
 ```
 ./fat.qtl.analysis.sh
-```
-```
+
 ./fat.rcim.analysis.sh
 ```
 
@@ -17,8 +16,7 @@ For slurm :
 
 ```
 sbatch --nodes=1 --ntasks-per-node=1 --mem-per-cpu=4000 ./fat.qtl.analysis.sh
-```
-```
+
 sbatch --nodes=1 --ntasks-per-node=1 --mem-per-cpu=24000 ./fat.rcim.analysis.sh
 ```
 
