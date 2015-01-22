@@ -5,7 +5,7 @@ Mmu2 QTL
 ==========
 This repository contains the raw data and the analysis scripts for mapping QTL on mouse chromosome 2 using CAST derived subcongenic strains.
 
-Please not that all the files contained in the data/ directory are excluded from the BSD license. To use them as part of any purpose : research or teaching, we would appreciate that you notify us by email.
+**Please not that all the files contained in the data/ directory are excluded from the BSD license**. To use them as part of any purpose : research or teaching, we would appreciate that you notify us by email.
 
 Thank you in advance
 
@@ -24,7 +24,14 @@ Contains an SVG file with the published figures.
 
 ### analysis/
 
-currently empty directory where analysis ouptuts are kept.
+Contains shell scripts for deplyoing the analysis scripts in R.
+
+*System requirements* : for the analysis you will require ```R:Language and Environment```, and the packages ```r/qtl```, ```boa```, ```coda```, ```hdrcde```, and ```RColorBrewer```.  You can install these as :
+   ```install.packages(c("qtl", "boa", "coda", "hdrcde", "RColorBrewer"))```
+
+All the scripts run on a single core, and most should work with ± 4GB of RAM.  However, scripts for the repicated CIM analyses will require more RAM ± 16 GB or more.
+
+R/qtl allows for mutlithreading with the ```n.cluster``` argument (requires packages ```snow``` and ```rlecuyer```).  In addition ```lapply``` and ```sapply``` loops can be run in paralell with ```snow``` using ```parLapply``` or ```parSapply```. , For compatibility with most systems these options were not implemented.
 
 ### src/
 

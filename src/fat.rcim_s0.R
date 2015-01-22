@@ -64,8 +64,8 @@ rcim.rfp.ss <- lapply(winsize, function(win.size) {
 
 	})
 
-save(list = c(ls(pattern = 'all.rfp'),'rcim.rfp.sw'), file = "rfp_s0_w1_w0.5_w0.25.rda")
-rm(list = c(ls(pattern = 'all.rfp'),'rcim.rfp.sw'))
+save(list = c(ls(pattern = 'all.rfp'),'rcim.rfp.ss'), file = "rfp_s0_w1_w0.5_w0.25.rda")
+rm(list = c(ls(pattern = 'all.rfp'),'rcim.rfp.ss'))
 
 
 rcim.ffp.ss <- lapply(winsize, function(win.size) {
