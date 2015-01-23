@@ -76,8 +76,8 @@ attr(TF.s05, 'map') = pull.map(D2sq.s05)
 legends <- names(TF.s0)[grep('s0', names(TF.s0))]
 legends <- gsub('\\.', ' -', legends)
 
-plot(TF.s0, lodcolum=c(1,2,3), xlim=c(145, 180), col=c(1,2,3), add=TRUE)
-plot(TF.s05, lodcolum=c(1,2,3), xlim=c(145, 180), col=c(7,8,9))
+plot(TF.s0, lodcolum=c(1,2,3), xlim=c(145, 180), col=c(1,2,3))
+plot(TF.s05, lodcolum=c(1,2,3), xlim=c(145, 180), col=c(7,8,9), add=TRUE)
 plot(TF.s1, lodcolum=c(1,2,3), xlim=c(145, 180), col=c(4,5,6), add=TRUE)
 
 plot(TF.s0, lodcolum=c(1,2,3), xlim=c(173, 175), col=c("brown"), lwd=2, lty=c(1,2,3), add=TRUE)
@@ -85,4 +85,4 @@ plot(TF.s05, lodcolum=c(1,2,3), xlim=c(172, 176), col=c("purple"), lwd=2, lty=c(
 plot(TF.s1, lodcolum=c(1,2,3), xlim=c(173, 175), col=c("darkgreen"),lwd=2, lty=c(1,2,3), add=TRUE)
 
 
-save(ls(pattern = "TF.s"), file = "TF_rcimSummary.rda")
+save(list = ls(pattern = "TF.s"), file = "TF_rcimSummary.rda")
