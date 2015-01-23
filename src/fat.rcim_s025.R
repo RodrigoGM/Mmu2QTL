@@ -16,10 +16,10 @@ source("../src/qtl.R")
 source("../src/qtl2.R")
 
 # working directory
-setwd('../analysis/rcim')
+setwd('../analysis/')
 
 # data
-load("../../data/D2sq_s0,s0.25,s0.5,s1.rda")
+load("../data/D2sq_s0,s0.25,s0.5,s1.rda")
 
 # code profiling
 Rprof()
@@ -38,7 +38,7 @@ rcim.tf.ss.s025 <- lapply(winsize, function(win.size) {
 	})
 
 #save and discard the results after the loop
-save(list = c(ls(pattern = 'all.tf'),'rcim.tf.ss.s025'), file = "tf_s0.25_w1_w0.5_w0.25.rda")
+save(list = c(ls(pattern = 'all.tf'),'rcim.tf.ss.s025'), file = "rcim/tf_s0.25_w1_w0.5_w0.25.rda")
 rm(list = c(ls(pattern = 'all.tf'),'rcim.tf.ss.s025'))
 
 # run rCIM for independent fat pad tissues
@@ -52,7 +52,7 @@ rcim.gfp.ss.s025 <- lapply(winsize, function(win.size) {
 
 	})
 
-save(list = c(ls(pattern = 'all.gfp'),'rcim.gfp.ss.s025'), file = "gfp_s0.25_w1_w0.5_w0.25.rda")
+save(list = c(ls(pattern = 'all.gfp'),'rcim.gfp.ss.s025'), file = "rcim/gfp_s0.25_w1_w0.5_w0.25.rda")
 rm(list = c(ls(pattern = 'all.gfp'),'rcim.gfp.ss.s025'))
 
 rcim.rfp.ss.s025 <- lapply(winsize, function(win.size) {
@@ -64,7 +64,7 @@ rcim.rfp.ss.s025 <- lapply(winsize, function(win.size) {
 
 	})
 
-save(list = c(ls(pattern = 'all.rfp'),'rcim.rfp.ss.s025'), file = "rfp_s0.25_w1_w0.5_w0.25.rda")
+save(list = c(ls(pattern = 'all.rfp'),'rcim.rfp.ss.s025'), file = "rcim/rfp_s0.25_w1_w0.5_w0.25.rda")
 rm(list = c(ls(pattern = 'all.rfp'),'rcim.rfp.ss.s025'))
 
 
@@ -77,7 +77,7 @@ rcim.ffp.ss.s025 <- lapply(winsize, function(win.size) {
 
 	})
 
-save(list = c(ls(pattern = 'all.ffp'),'rcim.ffp.ss.s025'), file = "ffp_s0.25_w1_w0.5_w0.25.rda")
+save(list = c(ls(pattern = 'all.ffp'),'rcim.ffp.ss.s025'), file = "rcim/ffp_s0.25_w1_w0.5_w0.25.rda")
 rm(list = c(ls(pattern = 'all.ffp'),'rcim.ffp.ss.s025'))
 
 
@@ -90,6 +90,6 @@ rcim.mfp.ss <- lapply(winsize, function(win.size) {
 
 	})
 
-save(list = c(ls(pattern = 'all.mfp'),'rcim.mfp.ss.s025'), file = "mfp_s0.25_w1_w0.5_w0.25.rda")
+save(list = c(ls(pattern = 'all.mfp'),'rcim.mfp.ss.s025'), file = "rcim/mfp_s0.25_w1_w0.5_w0.25.rda")
 rm(list = c(ls(pattern = 'all.mfp'),'rcim.mfp.ss.s025'))
 

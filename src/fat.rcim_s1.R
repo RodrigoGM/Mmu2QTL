@@ -16,10 +16,10 @@ source("../src/qtl.R")
 source("../src/qtl2.R")
 
 # working directory
-setwd('../analysis/rcim')
+setwd('../analysis/')
 
 # data
-load("../../data/D2sq_s0,s0.25,s0.5,s1.rda")
+load("../data/D2sq_s0,s0.25,s0.5,s1.rda")
 
 # code profiling
 Rprof()
@@ -38,7 +38,7 @@ rcim.tf.ss.s1 <- lapply(winsize, function(win.size) {
 	})
 
 #save and discard the results after the loop
-save(list = c(ls(pattern = 'all.tf'),'rcim.tf.ss.s1'), file = "tf_s1_w1_w0.5_w0.25.rda")
+save(list = c(ls(pattern = 'all.tf'),'rcim.tf.ss.s1'), file = "rcim/tf_s1_w1_w0.5_w0.25.rda")
 rm(list = c(ls(pattern = 'all.tf'),'rcim.tf.ss.s1'))
 
 # run rCIM for independent fat pad tissues
@@ -52,7 +52,7 @@ rcim.gfp.ss.s1 <- lapply(winsize, function(win.size) {
 
 	})
 
-save(list = c(ls(pattern = 'all.gfp'),'rcim.gfp.ss.s1'), file = "gfp_s1_w1_w0.5_w0.25.rda")
+save(list = c(ls(pattern = 'all.gfp'),'rcim.gfp.ss.s1'), file = "rcim/gfp_s1_w1_w0.5_w0.25.rda")
 rm(list = c(ls(pattern = 'all.gfp'),'rcim.gfp.ss.s1'))
 
 rcim.rfp.ss.s1 <- lapply(winsize, function(win.size) {
@@ -64,7 +64,7 @@ rcim.rfp.ss.s1 <- lapply(winsize, function(win.size) {
 
 	})
 
-save(list = c(ls(pattern = 'all.rfp'),'rcim.rfp.ss.s1'), file = "rfp_s1_w1_w0.5_w0.25.rda")
+save(list = c(ls(pattern = 'all.rfp'),'rcim.rfp.ss.s1'), file = "rcim/rfp_s1_w1_w0.5_w0.25.rda")
 rm(list = c(ls(pattern = 'all.rfp'),'rcim.rfp.ss.s1'))
 
 
@@ -77,7 +77,7 @@ rcim.ffp.ss.s1 <- lapply(winsize, function(win.size) {
 
 	})
 
-save(list = c(ls(pattern = 'all.ffp'),'rcim.ffp.ss.s1'), file = "ffp_s1_w1_w0.5_w0.25.rda")
+save(list = c(ls(pattern = 'all.ffp'),'rcim.ffp.ss.s1'), file = "rcim/ffp_s1_w1_w0.5_w0.25.rda")
 rm(list = c(ls(pattern = 'all.ffp'),'rcim.ffp.ss.s1'))
 
 
@@ -90,6 +90,6 @@ rcim.mfp.ss.s1 <- lapply(winsize, function(win.size) {
 
 	})
 
-save(list = c(ls(pattern = 'all.mfp'),'rcim.mfp.ss.s1'), file = "mfp_s1_w1_w0.5_w0.25.rda")
+save(list = c(ls(pattern = 'all.mfp'),'rcim.mfp.ss.s1'), file = "rcim/mfp_s1_w1_w0.5_w0.25.rda")
 rm(list = c(ls(pattern = 'all.mfp'),'rcim.mfp.ss.s1'))
 

@@ -17,7 +17,7 @@ For slurm :
 ```
 sbatch --nodes=1 --ntasks-per-node=1 --mem-per-cpu=4000 ./fat.qtl.analysis.sh
 
-sbatch --nodes=1 --ntasks-per-node=1 --mem-per-cpu=24000 ./fat.rcim.analysis.sh
+sbatch --nodes=1 --ntasks-per-node=1 --mem-per-cpu=24000 --dependency afterok:<jobid> ./fat.rcim.analysis.sh
 ```
 
 

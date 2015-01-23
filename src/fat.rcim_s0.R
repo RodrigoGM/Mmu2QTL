@@ -16,10 +16,10 @@ source("../src/qtl.R")
 source("../src/qtl2.R")
 
 # working directory
-setwd('../analysis/rcim')
+setwd('../analysis/')
 
 # data
-load("../../data/D2sq_s0,s0.25,s0.5,s1.rda")
+load("../data/D2sq_s0,s0.25,s0.5,s1.rda")
 
 # code profiling
 Rprof()
@@ -38,7 +38,7 @@ rcim.tf.ss <- lapply(winsize, function(win.size) {
       })
 
 # save and discard the results after the loop
-save(list = c(ls(pattern = 'all.tf'),'rcim.tf.ss'), file = "tf_s0_w1_w0.5_w0.25.rda")
+save(list = c(ls(pattern = 'all.tf'),'rcim.tf.ss'), file = "rcim/tf_s0_w1_w0.5_w0.25.rda")
 rm(list = c(ls(pattern = 'all.tf'),'rcim.tf.ss'))
 
 # run rCIM for independent fat pad tissues
@@ -52,7 +52,7 @@ rcim.gfp.ss <- lapply(winsize, function(win.size) {
 
 	})
 
-save(list = c(ls(pattern = 'all.gfp'),'rcim.gfp.ss'), file = "gfp_s0_w1_w0.5_w0.25.rda")
+save(list = c(ls(pattern = 'all.gfp'),'rcim.gfp.ss'), file = "rcim/gfp_s0_w1_w0.5_w0.25.rda")
 rm(list = c(ls(pattern = 'all.gfp'),'rcim.gfp.ss'))
 
 rcim.rfp.ss <- lapply(winsize, function(win.size) {
@@ -64,7 +64,7 @@ rcim.rfp.ss <- lapply(winsize, function(win.size) {
 
 	})
 
-save(list = c(ls(pattern = 'all.rfp'),'rcim.rfp.ss'), file = "rfp_s0_w1_w0.5_w0.25.rda")
+save(list = c(ls(pattern = 'all.rfp'),'rcim.rfp.ss'), file = "rcim/rfp_s0_w1_w0.5_w0.25.rda")
 rm(list = c(ls(pattern = 'all.rfp'),'rcim.rfp.ss'))
 
 
@@ -77,7 +77,7 @@ rcim.ffp.ss <- lapply(winsize, function(win.size) {
 
 	})
 
-save(list = c(ls(pattern = 'all.ffp'),'rcim.ffp.ss'), file = "ffp_s0_w1_w0.5_w0.25.rda")
+save(list = c(ls(pattern = 'all.ffp'),'rcim.ffp.ss'), file = "rcim/ffp_s0_w1_w0.5_w0.25.rda")
 rm(list = c(ls(pattern = 'all.ffp'),'rcim.ffp.ss'))
 
 
@@ -90,7 +90,7 @@ rcim.mfp.ss <- lapply(winsize, function(win.size) {
 
 	})
 
-save(list = c(ls(pattern = 'all.mfp'),'rcim.mfp.ss'), file = "mfp_s0_w1_w0.5_w0.25.rda")
+save(list = c(ls(pattern = 'all.mfp'),'rcim.mfp.ss'), file = "rcim/mfp_s0_w1_w0.5_w0.25.rda")
 rm(list = c(ls(pattern = 'all.mfp'),'rcim.mfp.ss'))
 
 
