@@ -27,4 +27,4 @@ install.packages(c("qtl", "boa", "coda", "hdrcde", "RColorBrewer"))
 ```
 All the scripts run on a single core, and most should work with ± 4GB of RAM. However, scripts for the repicated CIM analyses will require more RAM ± 16 GB or more.
 
-R/qtl allows for mutlithreading with the n.cluster argument (requires packages snow and rlecuyer). In addition lapply and sapply loops can be run in paralell with ```snow``` using ```parLapply``` or ```parSapply```. , For compatibility with most systems these options were not implemented.
+R/qtl allows for mutlithreading with the n.cluster argument (requires packages snow and rlecuyer). In addition lapply and sapply loops can be run in paralell with ```snow``` using ```parLapply``` or ```parSapply```.  These were not implemented in our scripts. Feel free to modify these scripts if speed is of the essence.
