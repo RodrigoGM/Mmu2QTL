@@ -1,4 +1,4 @@
-id	Short ID	phenotype
+	FullName	codes
 strain	Mouse Strain	
 mouse.id	Mouse Colony ID	
 dam	Dam	
@@ -11,7 +11,7 @@ date.6wk	Date at 4WK
 date.9wk	Date at 9WK	
 sac.date	Sacrifice date	
 age.sac	Age at Sacrifice	
-ls	Litter Size	
+ls	Litter Size		
 seq	Dam Sequence/Parity	
 mtw	Maternal Mating Weight	
 tissue	Tissue collected	0 = no ; 1 = yes

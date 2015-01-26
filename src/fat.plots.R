@@ -1,12 +1,19 @@
 ## quick and dirty plots
 setwd("../analysis/")
 library(qtl)
+library(RColorBrewer)
 source("../src/qtl.R")
 source("../src/qtl2.R")
 
 # loads output from fat.qtl.R
 load("scanone_output.rda")
 load("cim_output.rda")
+load("TF_rcimSummary.rda")
+load("../data/SBC_hg2d.rda")
+
+(abv <- read.delim("../data/abv.dat", row.names = 1))
+
+markers <- names(pull.map(D2sq)[[1]])
 
 # Interval Mapping QTL plots
 # Total Fat
@@ -15,7 +22,7 @@ legend("topright", c("No Covariates", "Sex & sac as Additive", "Sex & sac as Add
 
 plot(out.TF.nc, out.TF.sex, out.TF.ss2, col=c("red", "blue", "brown"), xlim=range(105:180), lty=1, lwd=2, incl.markers=TRUE, show.marker.names=FALSE, main= "QTL map for Total Fat \n Haley-Knott Scan")
 plot(out.TF.sac, out.TF.ss, col=c('purple', 'green'), xlim=range(105:180), lty=1, lwd=2, add=TRUE)
-locator(n=10, type="n") 
+#locator(n=10, type="n") 
 legend('topleft', c('No Covariates', 'Sex as Additive', 'sac as Additive', 'Sex & sac as Additive', 'Sex & sac as Interactive'), col= c("red", "blue", "purple", 'green','brown'), lty=c(1,1,1,1), lwd=c(2,2,2,2), bty='n')
 
 plot(out.TFe.nc, out.TFe.ss, out.TFe.ss2, col=c("red", "blue","purple"), xlim=range(105:180), lty=1, lwd=2, incl.markers=TRUE, show.marker.names=FALSE, main= "QTL map for Total Fat \n corrected by Strain \n Haley-Knott Method")
@@ -28,35 +35,35 @@ legend('topleft', c('No Covariates', 'Sex as Additive', 'sac as Additive', 'Sex 
 # Individual Fat pads
 plot(out.GFP.nc, out.RFP.nc, out.FFP.nc, col=c('red', 'blue', 'green'), xlim=range(143:180), lwd=2, incl.markers=TRUE, show.marker.names=TRUE, main="QTL for individual fat pads\n No Covariates")
 plot(out.MFP.nc, col=c('purple', ), lty=c(1,2), add=TRUE)
-locator(n=10, "l")
+#locator(n=10, "l")
 legend('topright', c('GFP', 'RFP', 'MFP', 'FFP'), col=c('red', 'blue', 'purple', 'green'), lty=c(1,1,1,1,2), lwd=2, bty='n')
 
 plot(out.GFP.ss, out.RFP.ss, out.FFP.ss, col=c('red', 'blue', 'green'), xlim=range(143:180), lwd=2, incl.markers=TRUE, show.marker.names=TRUE, main="QTL for individual fat pads\n Sex and sac as Additive Covariates")
 plot(out.MFP.ss, col=c('purple'), lty=c(1,2), lwd=2, add=TRUE)
-locator(n=10, "l")
+#locator(n=10, "l")
 legend('topright', c('GFP', 'RFP', 'MFP', 'FFP'), col=c('red', 'blue', 'purple', 'green'), lty=c(1,1,1,1,2), lwd=2, bty='n')
 
 plot(out.GFP.ss2, out.RFP.ss2, out.FFP.ss2, col=c('red', 'blue', 'green'), xlim=range(143:180), lwd=2, incl.markers=TRUE, show.marker.names=TRUE, main="QTL for individual fat pads\n Sex and sac as Additive & Interactive Covariates")
 plot(out.MFP.ss2, col=c('purple'), lty=c(1,2), lwd=2, add=TRUE)
 plot(out.TF.ss2, col=c('orange3'), lwd=0.5, lty=1, add=TRUE)
-locator(n=10, "l")
+#locator(n=10, "l")
 legend('topright', c('GFP', 'RFP', 'MFP', 'FFP', "TF"), col=c('red', 'blue', 'purple', 'green', 'orange3'), lty=c(1,1,1,1,2), lwd=2, bty='n')
 
 
 plot(out.GFPe.nc, out.RFPe.nc, out.FFPe.nc, col=c('red', 'blue', 'green'), xlim=range(143:180), lwd=2, incl.markers=TRUE, show.marker.names=TRUE, main="QTL for individual fat pads\n corrected by strain \n No Covariates")
 plot(out.MFPe.nc, out.WK9e.nc, col=c('purple', 'black'), lty=c(1,2), add=TRUE)
-locator(n=10, "l")
+#locator(n=10, "l")
 legend('topleft', c('GFP', 'RFP', 'MFP', 'FFP', 'WK9'), col=c('red', 'blue', 'purple', 'green', 'black'), lty=c(1,1,1,1), lwd=2, bty='n')
 
 plot(out.GFPe.ss, out.RFPe.ss, out.FFPe.ss, col=c('red', 'blue', 'green'), xlim=range(143:180), lwd=2, incl.markers=TRUE, show.marker.names=TRUE, main="QTL for individual fat pads\n corrected by strain \n Sex and sac as Additive Covariates")
 plot(out.MFPe.ss, out.WK9e.sw, col=c('purple', 'black'), lty=c(1,2), add=TRUE)
-locator(n=10, "l")
+#locator(n=10, "l")
 legend('topleft', c('GFP', 'RFP', 'MFP', 'FFP', 'WK9'), col=c('red', 'blue', 'purple', 'green', 'black'), lty=c(1,1,1,1), lwd=2, bty='n')
 
 plot(out.GFPe.ss2, out.RFPe.ss2, out.FFPe.ss2, col=c('red', 'blue', 'green'), xlim=range(143:180), lwd=2, incl.markers=TRUE, show.marker.names=TRUE, main="QTL for individual fat pads\n corrected by strain \n Sex and sac as Additive & Interactive Covariates")
 plot(out.MFPe.ss2, out.WK9e.sw2, col=c('purple', 'black'), lty=c(1,2), add=TRUE)
 plot(out.WK9.sw2, out.TF.ss2, col=c('black', 'orange'), lwd=0.5, lty=1, add=TRUE)
-locator(n=10, "l")
+#locator(n=10, "l")
 legend('topleft', c('GFP', 'RFP', 'MFP', 'FFP', 'WK9'), col=c('red', 'blue', 'purple', 'green', 'black'), lty=c(1,1,1,1), lwd=2, bty='n')
 
 
@@ -83,12 +90,12 @@ text(x=105, y=13.5, labels="[A]", cex=2)
 legend(x=102,y=13,  c('TF', 'GFP', 'RFP', 'MFP', 'FFP'), col=c('red', 'blue', 'brown', 'green', 'purple'), lty=c(1,1,1,1), lwd=4.25, bty='n', cex=1)
 par(mar=c(1,4,0,1))
 rs27669516<- find.marker(D2sq, chr=2, pos=174)
-effectplot(D2sq, pheno.col=find.pheno(D2sq, "TF.ss"), mname1=rs27669516, main="", ylab="Total Fat (g)")
+effectplot(D2sq, pheno.col=find.pheno(D2sq, "tf.ss"), mname1=rs27669516, main="", ylab="Total Fat (g)")
 text(x=3, y=0.021, labels="[B]", cex=2)
 text(x=1, y=-.08, labels="174.0 Mb", cex=1, adj=c(.1,0))
 par(mar=c(0,4,2,1))
 rs27307998<- find.marker(D2sq, chr=2, pos=156.97617)
-effectplot(D2sq, pheno.col=find.pheno(D2sq, "TF.ss"), mname1=rs27307998, main="", ylab="Total Fat (g)")
+effectplot(D2sq, pheno.col=find.pheno(D2sq, "tf.ss"), mname1=rs27307998, main="", ylab="Total Fat (g)")
 text(x=3, y=0.02, labels="[C]", cex=2)
 text(x=1, y=-.062, labels="156.9 Mb", cex=1, adj=c(.1,0))
 
