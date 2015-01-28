@@ -1,9 +1,9 @@
-[![DOI](https://zenodo.org/badge/7281/RodrigoGM/Mmu2QTL.png)](http://dx.doi.org/10.5281/zenodo.12793)
-
-
 Mmu2 QTL
 ==========
-This repository contains the raw data and the analysis scripts for mapping QTL on mouse chromosome 2 using CAST derived subcongenic strains.
+This repository contains the raw data and the analysis scripts for mapping QTL on mouse chromosome 2 using CAST derived subcongenic strains. Checkout our paper :
+
+[Gularte-Mérida, et al. Overlapping mouse subcongenic strains successfully separate two linked body fat QTL on distal MMU 2 (2015) 16:16](http://www.biomedcentral.com/1471-2164/16/16)
+
 
 **Please not that all the files contained in the data/ directory are excluded from the BSD license**. To use them for any purpose e.g. research or teaching, we would appreciate that you notify us by email.
 
@@ -37,4 +37,5 @@ R/qtl allows for mutlithreading with the ```n.cluster``` argument (requires pack
 
 Scripts and other source code to perform the data analysis.
 
-
+Our data repository does not contain the analysis scripts, and was the pre-publication repository. 
+[![DOI](https://zenodo.org/badge/7281/RodrigoGM/Mmu2QTL.png)](http://dx.doi.org/10.5281/zenodo.12793)
